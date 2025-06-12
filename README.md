@@ -1,121 +1,128 @@
-PackageChain: Secure Package Tracking with Blockchain Principles 📦🔒
-Overview ✨
+📦🔒 PackageChain: Secure Package Tracking with Blockchain Principles
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-PackageChain is a Flask-based web application that simulates key characteristics of decentralized ledgers to provide a secure, transparent, and verifiable package tracking solution. Addressing the limitations of traditional centralized logistics systems, PackageChain offers tamper-proof records, digital signatures, and role-based access control, ensuring data integrity and accountability throughout the package delivery process. 
+✨ Overview
 
+PackageChain is a Flask-based web application that simulates key characteristics of decentralized ledgers to provide a secure, transparent, and verifiable package tracking solution.
+It addresses the limitations of traditional centralized logistics systems by offering:
 
+• Tamper-proof records
+• Digital signatures
+• Role-based access control
 
-Features 🚀
-Tamper-Proof Tracking: Utilizes SHA-256 based package hash chaining to create an immutable audit trail of all package updates. 
+All to ensure data integrity and accountability throughout the package delivery process.
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+🚀 Features
 
+• Tamper-Proof Tracking – Uses SHA-256 hashing to create an immutable audit trail of all package updates.
+• Digital Signatures – Implements RSA-2048 encryption for cryptographic verification and non-repudiation.
+• Role-Based Access Control (RBAC) – Defines admin/staff roles; optional 2FA support included.
+• Complete Audit Trail – Maintains a full history of all package status changes.
+• User-Friendly Interface – Built using HTML, CSS, Bootstrap, and Jinja2 for a clean experience.
+• Local Development & Testing – Ensures package tracking and verification are reliable and robust.
 
-Digital Signatures: Integrates RSA-2048 encryption for digital signatures, allowing for cryptographic verification of each update's authenticity and ensuring non-repudiation. 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+🛠️ Technologies Used
 
+• Backend – Flask (Python)
+• Database – SQLite
+• Data Chaining – JSON files (for block simulation)
+• Frontend – HTML, CSS, Bootstrap, Jinja2, JavaScript
+• Cryptography – RSA-2048, SHA-256
+• ORM – SQLAlchemy
+• Security – Flask-WTF (CSRF protection), Flask-Login (Session management)
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Role-Based Access Control (RBAC): Implements a robust access control system with defined roles for administrators and staff, restricting sensitive actions to authorized personnel. Optional 2FA is also available. 
+🏗️ System Architecture
 
+• Client-Server Model
+• User/Admin Dashboard – Interactive interfaces for end-users and administrators
+• Flask Server – Manages routing, logic, and blockchain functions
+• Application Core – Handles:
 
+User registration/login
 
+Package creation and status updates
 
-Complete Audit Trail: Provides a comprehensive and verifiable history of all package status updates, enhancing transparency and accountability. 
-User-Friendly Interface: Developed with HTML, CSS, Bootstrap, and Jinja2 for a responsive and interactive user experience on both user and admin dashboards. 
+Data chaining logic
+• Data Storage:
 
-Local Development & Testing: Modeled and tested locally to confirm robustness and reliability in tracking, verification, and auditing package data. 
+SQLite – for user/package metadata
 
+JSON – for temporary blockchains per package
 
-Technologies Used 🛠️
-Backend: Flask (Python Micro Framework) 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+⚙️ Getting Started
 
+🔧 Prerequisites
 
+• Python 3.x
+• pip
 
-Database: SQLite (for user and package metadata storage) 
+📥 Installation
 
-
-
-
-Data Chaining Simulation: JSON files (for temporary storage of package history and block chaining) 
-
-
-
-
-Frontend: HTML, CSS, Bootstrap, Jinja2, JavaScript 
-Cryptography: RSA-2048 (for digital signatures), SHA-256 (for hashing) 
-
-
-ORM: SQLAlchemy (for SQLite integration) 
-
-
-Security: Flask-WTF (for CSRF protection), Flask-Login (for session management) 
-System Architecture 🏗️
-The system follows a classical client-server model.
-
-User/Admin Dashboard: Interactive interface for users and administrators. 
-
-
-Frontend UI: Responsive design using HTML, CSS, Bootstrap, and Jinja2. 
-
-
-Flask Web Server: Handles routing, logic, and blockchain integration. 
-
-Application Core Logic: Manages user registration, login, package creation, and block chaining. 
-
-
-
-Data Storage: SQLite for persistent user and package metadata, JSON for simulating blockchain chains per package. 
-
-
-Getting Started ⚙️
-Prerequisites
-Python 3.x
-pip
-Installation
 Clone the repository:
 
-Bash
-
+bash
+Copy
+Edit
 git clone <repository_url>
 cd PackageChain
 Create a virtual environment:
 
-Bash
-
+bash
+Copy
+Edit
 python -m venv venv
-source venv/bin/activate # On Windows, use `venv\Scripts\activate`
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 Install dependencies:
 
-Bash
-
+bash
+Copy
+Edit
 pip install -r requirements.txt
-Running the Application
-Initialize the database (if not already done):
+▶️ Running the Application
 
-Bash
+Initialize the database (if required):
 
-# You might need to run a specific script or command to set up the SQLite database
-# For example: python init_db.py (if such a script exists)
-Start the Flask application:
+bash
+Copy
+Edit
+# Example: python init_db.py
+Start the Flask server:
 
-Bash
-
+bash
+Copy
+Edit
 flask run
-The application will typically run on http://127.0.0.1:5000/.
+Access via browser:
+http://127.0.0.1:5000/
 
-Usage 💻
-Register a User: Navigate to the registration page (/register) to create a new user account. 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Login: Log in as a regular user or an administrator. Admins can have optional 2FA. 
+💻 Usage
 
-Track a Package: Use the tracking interface to get instant status updates by entering a tracking ID. 
-Admin Panel: Administrators can manage users, track all packages, and perform create/edit/delete operations on users and packages. 
-Contributing 🤝
-Contributions are welcome! Please feel free to open issues or submit pull requests.
+• Register a new user via /register
+• Login as user or admin
+• Track a package by entering the tracking ID
+• Admins can manage users, view/edit package records, and access audit trails
 
-License 📄
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🤝 Contributing
+
+We welcome contributions!
+Feel free to fork this repository and submit pull requests or open issues.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄 License
+
 This project is licensed under the MIT License.
-
+Please refer to the LICENSE file for details.
